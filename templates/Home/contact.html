@@ -1,0 +1,38 @@
+{% extends 'Home/navbar.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static '/css/contact.css' %}">
+    <div class="container my-5">
+        <div class="contact-section">
+            <!-- Title -->
+            <h2 class="section-title">Contact Us</h2>
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h5>Our Office</h5>
+                <p>123 Main Street, Suite 100<br>New York, NY 10001</p>
+
+                <h5>Email Us</h5>
+                <p><a href="mailto:support@news.com">support@news.com</a></p>
+
+                <h5>Call Us</h5>
+                <p>+1 123 456 7890</p>
+            </div>
+            <!-- Contact Form -->
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Type your message here" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+.search-bar {
+    font-size: 1.2rem;
+    height: 50px;
+}
+.search-button {
+    font-size: 1.5rem;
+    height: 50px;
+    width: 60px;
+}
+.card {
+    font-size: 1.2rem;
+    padding: 20px;
+}
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.empty-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.empty-card i {
+    font-size: 50px;
+    color: #6c757d;
+}
+
+.empty-card h5 {
+    margin-top: 20px;
+    color: #495057;
+}
+
+.empty-card p {
+    color: #868e96;
+}

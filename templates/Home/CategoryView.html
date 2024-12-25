@@ -1,0 +1,67 @@
+{% extends 'Home/navbar.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/categoryView.css' %}">
+<body style="background-color: #121212;">
+    <div class="container mt-4">
+        <div class="row g-4">
+            <!-- Main News Section -->
+            <div class="col-lg-8">
+                <div class="card border-0">
+                    <img src="{{ first.avatar.url }}" class="card-img-top img-fluid" alt="Main News">
+                    <div class="card-body bg-dark">
+                        <h2 class="card-title">
+                            <a href="/artical/{{ first.id }}/" class="text-white text-decoration-none">{{ first.title }}</a>
+                        </h2>
+                        <p class="card-text text-white">{{ first.content }}</p>
+                        <p class="text-muted small mb-0">{{ first.published_date }} | {{ first.author }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Side News Section -->
+            <div class="col-lg-4">
+                <!-- Side News 1 -->
+                <div class="card mb-3 border-0">
+                    <img src="{{ second.avatar.url }}" class="card-img-top img-fluid" alt="Side News 1">
+                    <div class="card-body bg-dark">
+                        <h5 class="card-title">
+                            <a href="/artical/{{ second.id }}/" class="text-white text-decoration-none">{{ second.title }}</a>
+                        </h5>
+                        <p class="text-muted small mb-0">{{ second.published_date }} | {{ second.author }}</p>
+                    </div>
+                </div>
+                <!-- Side News 2 -->
+                <div class="card border-0">
+                    <img src="{{ third.avatar.url }}" class="card-img-top img-fluid" alt="Side News 2">
+                    <div class="card-body bg-dark">
+                        <h5 class="card-title">
+                            <a href="/artical/{{ third.id }}/" class="text-white text-decoration-none">{{ third.title }}</a>
+                        </h5>
+                        <p class="text-muted small mb-0">{{ third.published_date }} | {{ third.author }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Additional Section -->
+        <div class="additional-section mt-5">
+            <h5>Discover more from the BBC</h5>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            {% for data in datas %}
+                                <div class="col-md-3">
+                                    <img src="{{data.avatar.url}}" class="d-block w-100" alt="...">
+                                    <h6><a href="/artical/{{data.id}}/" class="nav-link">{{data.title}}</a></h6>
+                                    <p>{{data.content}}</p> 
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- Add more carousel items if needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

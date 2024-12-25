@@ -1,0 +1,28 @@
+{% extends 'Account/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- کارت خطا -->
+{% if messages %}
+    <div class="mb-3">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} shadow-sm" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+<div class="form-card">
+    <h3 class="text-center mb-4 fw-bold">Create an account</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="d-flex justify-content-between align-items-center mt-3">
+            <button type="submit" class="btn btn-custom w-100">Create an Account</button>
+        </div>
+    </form>
+    <p class="text-center mt-3">
+        Already have an account? <a href="/login/" class="text-decoration-none">Log in</a>
+    </p>
+</div>
+{% endblock %}

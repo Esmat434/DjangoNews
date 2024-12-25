@@ -1,0 +1,28 @@
+.body{
+    background-color: gray;
+}
+.news-card img {
+    height: 100%;
+    object-fit: cover;
+}
+.main-news-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.news-card {
+    background-color: #000;
+    color: #fff;
+}
+.additional-section {
+    margin-top: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+.additional-section h5 {
+    margin-bottom: 15px;
+}
+.carousel-item img {
+    height: 200px;
+    object-fit: cover;
+}

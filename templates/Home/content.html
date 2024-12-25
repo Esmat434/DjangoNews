@@ -1,0 +1,86 @@
+{% extends 'Home/navbar.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/content.css' %}">
+    <div class="container container-content mt-4">
+        <!-- Header -->
+        <div class="row mb-3">
+            <div class="col-lg-12 text-center">
+                <h1 class="fw-bold fs-4">{{title.title}}</h1>
+                <p class="text-muted small">{{title.published_date}}</p>
+            </div>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+        <!-- Buttons Above Image -->
+        <div class="row justify-content-between align-items-center mb-2">
+            <div class="col-auto d-flex ">
+                {% if is_like %}
+                    <button type="submit" name="button" value="like" class="btn btn-content btn-outline-danger btn-sm me-2 d-flex align-items-center">
+                        <i class="bi bi-heart-fill text-danger me-1"></i> 
+                        <span>{{like_count}} Likes</span>
+                    </button>
+                {% else %}
+                    <button type="submit" name="button" value="like" class="btn btn-content btn-outline-danger btn-sm me-2 d-flex align-items-center">
+                        <i class="bi bi-heart me-1"></i> 
+                        <span>{{like_count}} Likes</span>
+                    </button>
+                {% endif %}
+                <button type="button" class="btn btn-content btn-outline-primary btn-sm d-flex align-items-center">
+                    <i class="bi bi-eye me-1"></i>
+                    <span>{{view_count}} Views</span>
+                </button>
+            </div>
+            <div class="col-auto d-flex">
+                {% if is_save %}
+                    <button name="button" value="save" class="btn btn-content btn-outline-secondary btn-sm me-2">
+                        <i class="bi bi-save-fill"></i> Save
+                    </button>
+                {% else %}
+                    <button name="button" value="save" class="btn btn-content btn-outline-secondary btn-sm me-2">
+                        <i class="bi bi-save"></i> Save
+                    </button>
+                {% endif %}
+                <div class="dropdown">
+                    <button  class="btn btn-content btn-outline-secondary btn-sm dropdown-toggle" type="button" id="shareDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-share"></i> Share
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="shareDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="shareTo('https://www.facebook.com/sharer/sharer.php?url={{ request.build_absolute_uri }}')" target="_blank">
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="shareTo('https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}')" target="_blank">
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="shareTo('https://api.whatsapp.com/send?text={{ request.build_absolute_uri }}')" target="_blank">
+                                WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </form>
+        {% for data in datas %}
+            <!-- Image -->
+            <div class="row me-auto ms-auto">
+                <div class="col-lg-12">
+                    <img src="{{data.avatar.url}}" class="img-fluid rounded" alt="Article Image">
+                </div>
+            </div>
+            <!-- Article Content -->
+            <div class="row mt-3">
+                <div class="col-lg-12">
+                    <p>{{data.description}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <script src="{% static 'js/content.js' %}"></script>
+{% endblock %}

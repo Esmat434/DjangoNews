@@ -1,0 +1,42 @@
+{% extends 'Home/navbar.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static '/css/saveArtical.css' %}">
+    {% if articals %}
+        {% for data in articals %}
+            <div class="container mt-5 d-flex justify-content-center">
+                <!-- کارت با طراحی ریسپانسیو -->
+                <div class="card shadow custom-card">
+                    <div class="row g-0">
+                        <!-- سمت چپ: عنوان و توضیحات -->
+                        <div class="col-md-7 d-flex flex-column justify-content-center p-3">
+                            <h5 class="card-title"><a href="/artical/{{data.artical.id}}/" class="nav-link">{{data.artical.title}}</a></h5>
+                            <p class="card-text text-muted">{{data.artical.content}}</p>
+                        </div>
+                        <!-- سمت راست: تصویر -->
+                        <div class="col-md-5">
+                            <img src="{{data.artical.avatar.url}}" alt="Card Image">
+                        </div>
+                    </div>
+                    <!-- پایین کارت: دکمه حذف -->
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="card-footer text-end">
+                            <button type="submit" name="button" value="{{data.id}}" class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash"></i> Remove
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <div class="empty-card">
+                <i class="bi bi-cart-x"></i>
+                <h5>No Items Available</h5>
+                <p>It looks like there are no items to display at the moment. Please check back later.</p>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

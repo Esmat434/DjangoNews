@@ -1,0 +1,37 @@
+/* تنظیمات اضافی برای کارت */
+.custom-card {
+    width: 90vw; /* عرض کارت 80 درصد از عرض صفحه */
+    max-width: 900px; /* حداکثر عرض کارت */
+    height: auto; /* ارتفاع خودکار کارت */
+}
+
+.custom-card img {
+    width: 100%; /* تصویر به اندازه عرض کارت */
+    height: 200px; /* ارتفاع ثابت برای تصویر */
+    object-fit: cover; /* برش مناسب تصویر */
+}
+.card-footer {
+    background-color: #fff; /* پس‌زمینه سفید برای فوتر */
+}
+
+.empty-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.empty-card i {
+    font-size: 50px;
+    color: #6c757d;
+}
+
+.empty-card h5 {
+    margin-top: 20px;
+    color: #495057;
+}
+
+.empty-card p {
+    color: #868e96;
+}

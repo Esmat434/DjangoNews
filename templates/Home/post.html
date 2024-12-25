@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Post</title>
+</head>
+<body>
+    {% for post in posts %}
+        <p>{{post.content}}</p>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" name="data" value="{{post.id}}"></button><i class="fas fa-edit"></i>
+            <button type="submit" name="data" value="delete"></button><i class="fas fa-trash"></i>
+        </form>
+    {% endfor %}
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter Comment" name="data">
+        <input type="submit">
+    </form>
+</body>
+<script>
+</script>
+</html>

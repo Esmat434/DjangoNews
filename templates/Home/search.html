@@ -1,0 +1,52 @@
+{% extends 'Home/navbar.html' %}
+{% load static %}
+{% block content %}
+  <link rel="stylesheet" href="{% static '/css/search.css'%}">
+  <!-- Container for the search bar and card -->
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <!-- Search Bar (in a single column) -->
+      <div class="col-12 col-md-8">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="input-group mb-4">
+              <input type="text" name="search" class="form-control search-bar" placeholder="Search..." aria-label="Search" aria-describedby="search-addon">
+              <button class="btn btn-outline-secondary search-button" type="submit" id="search-addon">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+        </form>
+      </div>
+    </div>
+    {% if contents %}
+      {% for data in contents %}
+        <div class="row justify-content-center">
+          <!-- Card (in a single column) -->
+          <div class="col-12 col-md-8">
+            <div class="card mb-4">
+              <div class="row no-gutters">
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <a href="/artical/{{data.id}}/" class="nav-link"><h5 class="card-title">{{data.title}}</h5></a>
+                    <p class="card-text">{{data.content}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <img src="{{data.avatar.url}}" class="card-img" alt="image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="empty-card">
+            <i class="bi bi-cart-x"></i>
+            <h5>No Items Available</h5>
+            <p>It looks like there are no items to display at the moment. Please check back later.</p>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

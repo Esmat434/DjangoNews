@@ -1,0 +1,78 @@
+{% extends 'Home/navbar.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static '/css/aboutUs.css' %}">
+    <div class="container my-5">
+        <div class="about-section">
+            <!-- Introduction Section -->
+            <section>
+                <h2 class="section-title">Who We Are</h2>
+                <p>
+                    Welcome to our company! We are dedicated to delivering high-quality news and information 
+                    to our audience. Our mission is to inform, inspire, and engage our readers through 
+                    reliable and impactful journalism.
+                </p>
+            </section>
+
+            <!-- Mission Section -->
+            <section>
+                <h2 class="section-title">Our Mission</h2>
+                <p>
+                    Our mission is to be the most trusted source of news, providing unbiased and accurate 
+                    reporting. We strive to empower our readers with knowledge and foster informed communities.
+                </p>
+            </section>
+
+            <!-- Vision Section -->
+            <section>
+                <h2 class="section-title">Our Vision</h2>
+                <p>
+                    We envision a world where everyone has access to the information they need to make 
+                    informed decisions and lead meaningful lives. Our commitment is to excellence and 
+                    transparency in journalism.
+                </p>
+            </section>
+
+            <!-- Team Section -->
+            <section>
+                <h2 class="section-title">Meet Our Team</h2>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="card team-card">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/022/255/540/small_2x/hooded-hacker-in-a-dark-with-neon-lights-3d-rendering-generative-ai-photo.jpg" alt="Team Member">
+                            <h5>Jane Doe</h5>
+                            <p>Editor-in-Chief</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card team-card">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/028/560/488/small_2x/cybersecurity-hacker-with-a-concealed-face-wearing-a-hoodie-in-a-technology-themed-wallpaper-photo.jpg" alt="Team Member">
+                            <h5>John Smith</h5>
+                            <p>Senior Journalist</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card team-card">
+                            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Team Member">
+                            <h5>Emily Johnson</h5>
+                            <p>Content Strategist</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section>
+                <h2 class="section-title">Get in Touch</h2>
+                <p>
+                    Have questions or want to learn more about our work? Feel free to reach out:
+                </p>
+                <p>
+                    Email: <a href="mailto:info@news.com">info@news.com</a><br>
+                    Phone: +1 123 456 7890
+                </p>
+                <a href="#" class="btn btn-primary">Contact Us</a>
+            </section>
+        </div>
+    </div>
+{% endblock %}

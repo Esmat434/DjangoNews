@@ -1,0 +1,27 @@
+.hero {
+background: url('https://wallpapercave.com/wp/wp6928045.jpg') no-repeat center center;
+background-size: cover;
+color: white;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0 10%;
+}
+.navbar-custom {
+  background-color: rgba(56, 55, 55, 0.03);
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.btn-primary {
+  font-size: 1rem;
+  padding: 10px 20px;
+}

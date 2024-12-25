@@ -1,0 +1,66 @@
+.navbar {
+    background-color: #000; /* پس‌زمینه مشکی */
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar-nav .nav-link {
+    color: #fff; /* متن سفید */
+}
+.navbar-nav .nav-link:hover {
+    color: #ccc; /* تغییر رنگ هنگام هاور */
+}
+.dropdown-menu {
+    background-color: #000; /* پس‌زمینه مشکی */
+}
+.dropdown-item {
+    color: #fff; /* متن سفید */
+}
+.dropdown-item:hover {
+    background-color: #444; /* تغییر رنگ هنگام هاور */
+}
+.mobile-account-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+.mobile-account-icons a {
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.mobile-account-icons a:hover {
+    color: #ccc;
+}
+
+/* login sign in button style */
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+.btn-custom {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-registration {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    box-shadow: 0 4px 6px rgba(255, 120, 180, 0.5);
+}
+.btn-login {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    box-shadow: 0 4px 6px rgba(0, 114, 255, 0.5);
+}
+.btn-custom:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.btn-custom:active {
+    transform: scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

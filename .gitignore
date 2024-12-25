@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.swp
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+*.tgz
+*.bak
+*.swp
+
+# Media files (uploaded by users)
+media/
+
+collect_static/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# VS Code workspace files
+*.code-workspace
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Coverage reports
+.coverage
+*.coveragerc
+
+# Jupyter Notebooks
+.ipynb_checkpoints/

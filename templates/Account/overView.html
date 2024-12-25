@@ -1,0 +1,35 @@
+{% extends 'Home/navbar.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static '/css/overView.css' %}">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/account/over-view/">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account/settings/">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account/comments/">Your Comments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/log-out/">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Lovely to see you here</h1>
+      <p>Welcome to your BBC. You can find out more about what you can do with your account. Or visit your settings to view and edit your personal info.</p>
+      <a href="/account/settings/" class="btn btn-primary">Continue to Settings</a>
+    </section>
+{% endblock %}

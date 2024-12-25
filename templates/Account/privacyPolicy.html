@@ -1,0 +1,70 @@
+{% extends 'Home/navbar.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static '/css/privacyPolicy.css' %}">
+    <div class="container my-5">
+        <div class="privacy-section">
+            <!-- Introduction Section -->
+            <section>
+                <h2 class="section-title">Introduction</h2>
+                <p>
+                    This Privacy Policy explains how we handle your information when you use our services. We are 
+                    committed to protecting your privacy and ensuring your data is secure.
+                </p>
+            </section>
+
+            <!-- Information Collection Section -->
+            <section>
+                <h2 class="section-title">What Information We Collect</h2>
+                <ul>
+                    <li>Personal information you provide when signing up for our services.</li>
+                    <li>Data automatically collected, such as IP address and browsing behavior.</li>
+                    <li>Cookies and similar technologies for website functionality.</li>
+                </ul>
+            </section>
+
+            <!-- How We Use Information Section -->
+            <section>
+                <h2 class="section-title">How We Use Your Information</h2>
+                <p>
+                    The information we collect is used to:
+                </p>
+                <ul>
+                    <li>Provide, improve, and personalize our services.</li>
+                    <li>Analyze user behavior to enhance content quality.</li>
+                    <li>Communicate updates, newsletters, and promotional offers.</li>
+                </ul>
+            </section>
+
+            <!-- Sharing Information Section -->
+            <section>
+                <h2 class="section-title">Sharing Your Information</h2>
+                <p>
+                    We do not sell your personal data. However, we may share it with trusted partners who assist 
+                    us in operating our services, under strict confidentiality agreements.
+                </p>
+            </section>
+
+            <!-- Cookie Policy Section -->
+            <section>
+                <h2 class="section-title">Cookies</h2>
+                <p>
+                    Cookies are used to enhance your browsing experience. You can manage your cookie preferences 
+                    through your browser settings.
+                </p>
+            </section>
+
+            <!-- Contact Section -->
+            <section>
+                <h2 class="section-title">Contact Us</h2>
+                <p>
+                    If you have questions about this Privacy Policy, feel free to contact us:
+                </p>
+                <p>
+                    Email: <a href="mailto:privacy@news.com">BBC@news.com</a><br>
+                    Phone: +1 123 456 7890
+                </p>
+            </section>
+        </div>
+    </div>
+{% endblock %}
